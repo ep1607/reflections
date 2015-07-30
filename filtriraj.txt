@@ -1,0 +1,74 @@
+function filtriraj(text, banned_words) {
+    
+    var i=0;
+    var j=0;
+    var word;
+    
+    //word=$(banned_words.find("word")[5]).text() + "***";
+    //word=$(banned_words.find("word")[5]).text();
+    var numItems = $(banned_words.find("word")).length;
+    while (j<numItems) {
+      
+      //word=$(banned_words.find("word")[j]).html();
+      
+      //text=text.replace(new RegExp(word, "g"), "***");
+      var re = new RegExp($(banned_words.find("word")[j]).text(), "g");
+      
+      text = text.replace(re , function (word) {
+        var i=0;
+        var zvezdice="";
+        while(i<word.length) {
+          zvezdice=zvezdice+'*';
+          
+          i++;
+        }
+       3
+ return zvezdice;
+      });
+     j++;
+    }
+      
+   return text;
+  
+}
+
+-----------
+ function (word) {
+        var i=0;
+        var zvezdice="";
+        while(i<word.length) {
+          zvezdice=zvezdice+'*';
+          
+          i++;
+        }
+        return zvezdice;
+      }
+--------------
+
+function filtriraj(text, banned_words) {
+    
+    var i=0;
+    var j=0;
+    var word;
+    
+    //word=$(banned_words.find("word")[5]).text() + "***";
+    //word=$(banned_words.find("word")[5]).text();
+    var numItems = $(banned_words.find("word")).length;
+    alert("1");
+    var urejene_words= $(banned_words.find("word"));
+    alert($(urejene_words[3]).text());
+    urejene_words=$(urejene_words).sort( compareStringLengths );
+    alert(urejene_words.html());
+    
+    while (j<numItems) {
+      word = $(urejene_words[j]).html();
+      text=text.split(word).join(" *** ");
+     j++;
+    }
+      
+   return text;
+  
+}
+
+-------------
+
