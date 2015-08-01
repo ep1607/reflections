@@ -2,3 +2,11 @@ What happens when you initialize a repository? Why do you need to do it?
 creates a .git directory. we do it so we can submit commits later.
 
 How is the staging area different from the working directory and the repository? What value do you think it offers?
+staging area includes files that will be committed later. working area includes all files in working directory.
+
+How can you use the staging area to make sure you have one commit per logical change?
+In a way that I add to staging area just file that includes this change.
+
+What are some situations when branches would be helpful in keeping your history organized? How would branches help?
+when I try to implement a new feature, design, game mode...
+
